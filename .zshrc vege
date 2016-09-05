@@ -1,0 +1,3 @@
+if [ -d "/home/nitrous/jdk1.8.0_101" ] ; then
+        export JAVA_HOME=/home/nitrous/jdk1.8.0_101
+fi
