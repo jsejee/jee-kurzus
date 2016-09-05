@@ -1,0 +1,75 @@
+   9  wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u101-b13/jdk-8u101-linux-x64.tar.gz
+   10  mv jdk-8u101-linux-x64.tar.gz ..
+   11  tar xfz jdk-8u101-linux-x64.tar.gz
+   12  wget http://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.tar.gz
+   13  tar xfz wildfly-10.1.0.Final.tar.gz
+   14  echo $PATH
+   15  sudo update-alternatives --config java
+   16  sudo update-alternatives --list java
+   17  ls
+   18  pwd
+   19  ls code
+   20  ls codee
+   21  whereis java
+   22  sudo update-alternatives --install "/usr/bin/java" "java" "jdk1.8.0_101/bin/java" 1
+   23  sudo update-alternatives --install "/usr/bin/java" "java" "/home/nitrous/jdk1.8.0_101/bin/java" 1
+   24  sudo update-alternatives --install "/usr/bin/javac" "javac" "/home/nitrous/jdk1.8.0_101/bin/javac" 1
+   25  sudo update-alternatives --install "/usr/bin/javaw" "javaw" "/home/nitrous/jdk1.8.0_101/bin/javaw" 1
+   26  sudo update-alternatives --config java
+   27  java -version
+   28  cd wildfly-10.1.0.Final/bin
+   29  ./standalone.sh
+   30  sudo apt-get remove openjdk*
+   31  java -version
+   32  ./standalone.sh
+   33  exit
+   34  cd wildfly-10.1.0.Final/bin
+   35  ./standalone.sh
+   36  echo $JAVA_HOME
+   37  nano ~/.bashrc
+   38  java -version
+   39  ls
+   40  cd jdk1.8.0_101
+   41  pwd
+   42  cd ..
+   43  cd wildfly-10.1.0.Final/bin
+   44  ./standalone.sh
+   45  source ~/.bashrc
+   46  bash
+   47  mvn archetype:generate
+   48  whereis mvn
+   49  cd ..
+   50  wget http://xenia.sote.hu/ftp/mirrors/www.apache.org/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+   51  tar xfz apache-maven-3.3.9-bin.tar.gz
+   52  sudo update-alternatives --install "/usr/bin/mvn" "mvn" "/home/nitrous/apache-maven-3.3.9/bin/mvn" 1
+   53  mvn
+   54  nano ~/.zshrc
+   55  source ~/.zshrc
+   56  mvn
+   57  ls
+   58  cd code
+   59  mvn archetype:generateű
+   60  mvn archetype:generate
+   61  cd 1608
+   62  mvn wildfly:deploy
+   63  mvn -Djboss.management.http.port=8081 wildfly:deploy
+   64  mvn wildfly:deploy
+   65  cd wildfly-10.1.0.Final/bin
+   66  ./standalone.sh -Djboss.bind.address.management=0.0.0.0 -Djboss.bind.address=0.0.0.0
+   67  htop
+   68  sudo apt-get install htop
+   69  htop
+   70  df -h
+   71  htop
+   72  wildfly-10.1.0.Final/bin
+   73  ./standalone.sh -Djboss.bind.address.management=0.0.0.0 -Djboss.bind.address=0.0.0.0
+   74  ls
+   75  cd code/1608
+   76  git init
+   77  nano .gitignore
+   78  git status
+   79  nano .cheatsheet.xml
+   80  nano .factorypath
+   81  git add .
+   82  git status
+   83  git commit -m "mvn archetype:generate"
